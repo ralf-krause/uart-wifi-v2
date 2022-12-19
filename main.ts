@@ -1,6 +1,6 @@
 communication.setupWifi(
-SerialPin.P0,
-SerialPin.P1,
+SerialPin.C17,
+SerialPin.C16,
 BaudRate.BaudRate115200,
 "",
 ""
