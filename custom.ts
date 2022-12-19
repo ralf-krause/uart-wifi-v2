@@ -7,7 +7,7 @@
 /**
  * Communication blocks
  */
-//% weight=60 color=#000000 icon="\uF61C"
+//% weight=60 color=#000000 icon="\f1eb"
 namespace communication {
  
     let isWifiConnected = false;
