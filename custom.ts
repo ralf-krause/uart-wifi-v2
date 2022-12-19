@@ -15,7 +15,7 @@ namespace communication {
     /**
      * Setup Grove - Uart WiFi V2 to connect to  Wi-Fi
      */
-    //% block="setup Wifi TX %txPin RX %rxPin Baud rate %baudrate|SSID = %ssid Password = %passwd"
+    //% block="setup Wifi|. TX %txPin RX %rxPin|. Baud rate %baudrate|. SSID = %ssid Password = %passwd"
     //% group="UartWiFi"
     //% txPin.defl=SerialPin.C17
     //% rxPin.defl=SerialPin.C16
