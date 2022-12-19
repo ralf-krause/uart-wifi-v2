@@ -46,10 +46,10 @@ namespace communication {
     }
 
     /**
-     * Check if Grove - Uart WiFi V2 is connected to Wifi
+     * Check if "Grove - UART Wifi V2" is connected to wifi
      */
     //% block="Wifi OK?"
-    //% group="UartWiFi"
+    //% group="UART Wifi"
     export function wifiOK() {
         return isWifiConnected
     }
@@ -58,7 +58,7 @@ namespace communication {
      * Send data to ThinkSpeak
      */
     //% block="Send Data to your ThinkSpeak Channel|Write API Key %apiKey|Field1 %field1|Field2 %field2|Field3 %field3|Field4 %field4|Field5 %field5|Field6 %field6|Field7 %field7|Field8 %field8"
-    //% group="UartWiFi"
+    //% group="UART Wifi"
     //% apiKey.defl="your Write API Key"
     export function sendToThinkSpeak(apiKey: string, field1: number, field2: number, field3: number, field4: number, field5: number, field6: number, field7: number, field8: number) {
         let result = 0
@@ -105,7 +105,7 @@ namespace communication {
      * Send data to IFTTT
      */
     //% block="Send Data to your IFTTT Event|Event %event|Key %key|value1 %value1|value2 %value2|value3 %value3"
-    //% group="UartWiFi"
+    //% group="UART Wifi"
     //% event.defl="your Event"
     //% key.defl="your Key"
     //% value1.defl="hello"
