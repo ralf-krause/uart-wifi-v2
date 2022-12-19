@@ -13,10 +13,10 @@ namespace communication {
     let isWifiConnected = false;
  
     /**
-     * Setup Grove - Uart WiFi V2 to connect to  Wi-Fi
+     * Setup "Grove - UART Wifi V2" to connect to wifi
      */
-    //% block="Setup Wifi| TX %txPin RX %rxPin| Baud rate %baudrate| SSID = %ssid| Password = %passwd"
-    //% group="UartWiFi"
+    //% block="Setup Wifi|TX %txPin RX %rxPin|Baud rate %baudrate|SSID = %ssid|Password = %passwd"
+    //% group="UART Wifi"
     //% txPin.defl=SerialPin.C17
     //% rxPin.defl=SerialPin.C16
     //% baudRate.defl=BaudRate.BaudRate115200
