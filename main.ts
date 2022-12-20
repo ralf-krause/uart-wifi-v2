@@ -2,7 +2,7 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     communication.sendAtCmd("AT+CIFSR")
 })
 serial.onDataReceived(serial.delimiters(Delimiters.NewLine), function () {
-    basic.showString(serial.readLine())
+    basic.showString(communication.getResponse(1000))
 })
 communication.setupWifi(
 SerialPin.C17,

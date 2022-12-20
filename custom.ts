@@ -15,7 +15,7 @@ namespace communication {
     /**
      * Setup "Grove - UART Wifi V2" to connect to wifi
      */
-    //% block="Setup Wifi|TX %txPin RX %rxPin|Baud rate %baudrate|SSID = %ssid|Password = %passwd"
+    //% block="Setup Wifi|TX %txPin RX %rxPin|Baud rate %baudrate|SSID %ssid|Password %passwd"
     //% group="UART Wifi"
     //% txPin.defl=SerialPin.C17
     //% rxPin.defl=SerialPin.C16senden
@@ -67,7 +67,7 @@ namespace communication {
     /**
       * Get response from "Grove - UART Wifi V2"
       */
-    //% block="get response with %timeout milliseconds"
+    //% block="get response in %timeout milliseconds"
     //% group="UART Wifi"
     export function getResponse(timeout: number) {
         let buffer = ""
@@ -86,7 +86,7 @@ namespace communication {
     /**
     * Wait AT response from "Grove - UART Wifi V2"
     */
-    //% block="wait AT response|t1 %target1 |t2 %target2 |t3%target3|with %timeout milliseconds"
+    //% block="wait AT response|t1 %target1|t2 %target2|t3%target3|with %timeout milliseconds"
     //% group="UART Wifi"
     //% target1.defl="t1"
     //% target2.defl="t2"
