@@ -9,7 +9,7 @@
  */
 //% weight=55 color=#8B8B83 icon="\uf1eb"
 namespace communication {
- 
+
     let isWifiConnected = false;
  
     /**
@@ -70,17 +70,21 @@ namespace communication {
     //% block="ip address"
     //% group="UART Wifi"
     export function ipaddress() {
-        let buffer = "##"
-        let start = 0
+        let buffer = ""
+        let n = 0
         if (isWifiConnected) {
-//            sendAtCmd("AT")
-//            result = waitAtResponse("OK", "ERROR", "None", 1000)
             sendAtCmd("AT+CIFSR")
-            start = input.runningTime()
+            n = input.runningTime()
 
-            while ((input.runningTime() - start) < 2000) {
+            while ((input.runningTime() - n) < 2000) {
                 buffer += serial.readString()
             }
+
+            n = buffer.indexOf('"')
+            buffer = buffer.substr(n + 1, 100)
+            n = buffer.indexOf('"')
+            buffer = buffer.substr(0, n)
+
         }
         return buffer
     }
