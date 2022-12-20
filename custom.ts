@@ -18,7 +18,7 @@ namespace communication {
     //% block="Setup Wifi|TX %txPin RX %rxPin|Baud rate %baudrate|SSID %ssid|Password %passwd"
     //% group="UART Wifi"
     //% txPin.defl=SerialPin.C17
-    //% rxPin.defl=SerialPin.C16senden
+    //% rxPin.defl=SerialPin.C16
     //% baudRate.defl=BaudRate.BaudRate115200
     export function setupWifi(txPin: SerialPin, rxPin: SerialPin, baudRate: BaudRate, ssid: string, passwd: string) {
         let result = 0
@@ -65,19 +65,23 @@ namespace communication {
     }
 
     /**
-      * Get response from "Grove - UART Wifi V2"
+      * Get ip address from "Grove - UART Wifi V2"
       */
-    //% block="get response in %timeout milliseconds"
+    //% block="ip address"
     //% group="UART Wifi"
-    export function getResponse(timeout: number) {
-        let buffer = ""
-        let start = input.runningTime()
+    export function ipaddress() {
+        let buffer = "##"
+        let start = 0
+        if (isWifiConnected) {
+//            sendAtCmd("AT")
+//            result = waitAtResponse("OK", "ERROR", "None", 1000)
+            sendAtCmd("AT+CIFSR")
+            start = input.runningTime()
 
-        while ((input.runningTime() - start) < timeout) {
-            buffer += serial.readString()
-            basic.pause(100)
+            while ((input.runningTime() - start) < 2000) {
+                buffer += serial.readString()
+            }
         }
-
         return buffer
     }
 
