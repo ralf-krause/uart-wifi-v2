@@ -8,6 +8,7 @@
  * Communication blocks
  */
 //% weight=5 color=#404040 icon="\uf1eb"
+
 namespace UART_Wifi_V2 {
 
     let isWifiConnected = false;
