@@ -1,14 +1,14 @@
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
-    basic.showString(communication.ipaddress())
+    basic.showString(UART_Wifi_V2.ipaddress())
 })
-communication.setupWifi(
+UART_Wifi_V2.setupWifi(
 SerialPin.C17,
 SerialPin.C16,
 BaudRate.BaudRate115200,
 "Bertha",
 "12345678"
 )
-if (communication.wifiOK()) {
+if (UART_Wifi_V2.wifiOK()) {
     basic.showIcon(IconNames.Yes)
 } else {
     basic.showIcon(IconNames.No)

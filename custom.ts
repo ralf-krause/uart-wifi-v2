@@ -7,13 +7,13 @@
 /**
  * Communication blocks
  */
-//% weight=55 color=#8B8B83 icon="\uf1eb"
-namespace communication {
+//% weight=5 color=#404040 icon="\uf1eb"
+namespace UART_Wifi_V2 {
 
     let isWifiConnected = false;
  
     /**
-     * Setup "Grove - UART Wifi V2" to connect to wifi
+     * Setup UART Wifi V2 to connect to wifi
      */
     //% block="Setup Wifi|TX %txPin RX %rxPin|Baud rate %baudrate|SSID %ssid|Password %passwd"
     //% group="UART Wifi"
